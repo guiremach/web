@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "26e56f12-3d0b-4c97-b9a6-42928c8b74db",
+		"name": "Noticias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33040749"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:6868/api/noticias"
+			},
+			"response": []
+		},
+		{
+			"name": "GetByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:6868/api/noticias/3"
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"chapeu\": \"teste\",\n        \"url\": \"https://www.estadao.com.br/\",\n        \"titulo\": \"Teste de titulo\",\n        \"data_hora_publicacao\": \"2023-11-14 16:57:00\",\n        \"imagem\": \"https://www.estadao.com.br/resizer/GoaFoVG3UQNupZaW1aEk-ICk4CE=/380x0/filters:quality(70):format(jpg)/cloudfront-us-east-1.images.arcpublishing.com/estadao/3XFU3QE5O5CZNKJUXF3E2FRQ3Q.jpg\",\n        \"thumbnail\": \"https://www.estadao.com.br/resizer/3m0u6y18yF_RqtUEY3o_R9uRIFc=/350x199/smart/filters:quality(70):format(jpg)/arc-anglerfish-arc2-prod-estadao/public/3XFU3QE5O5CZNKJUXF3E2FRQ3Q.jpg\",\n        \"conteudo\": \"<p>Teste de conteudo</p>\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6868/api/noticias"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n        \"titulo\": \"Titulo Atualizado\",\n        \"conteudo\": \"<p>Conteudo <b>Atualizado</b></p>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:6868/api/noticias/4"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:6868/api/noticias/4"
+			},
+			"response": []
+		}
+	]
+}
